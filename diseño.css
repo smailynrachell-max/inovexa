@@ -1,0 +1,320 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+  background: rgb(20, 53, 100);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ======== NAVEGACIÓN ======== */
+/* ===== MENÚ PRINCIPAL ===== */
+nav {
+  background: rgb(155, 190, 247);
+  padding: 10px 0;
+  color: black;
+}
+
+nav a {
+  color: rgb(46, 16, 129);
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: rgb(93, 0, 255);
+}
+/* ===== MENÚ PRINCIPAL ===== */
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  color: rgb(46, 16, 129);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+  background: rgb(92, 126, 228);
+  color: white;
+}
+
+/* ===== DESPLEGABLE ===== */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(240, 240, 255);
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 0;
+  z-index: 10;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: rgb(46, 16, 129);
+}
+
+.dropdown-content a:hover {
+  background: rgb(92, 126, 228);
+  color: white;
+}
+
+/* Mostrar el menú al pasar el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .dropdown-content a {
+    padding-left: 20px;
+  }
+}
+
+
+/* ======== CONTENIDO PRINCAL ======== */
+main {
+  display: flex;
+  margin: 20px;
+  background: white;
+}
+
+/* ======== SECCIONES ======== */
+section {
+  background: rgb(165, 196, 236);
+  flex: 3;
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ======== ARTÍCULOS ======== */
+article {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgb(151, 157, 238);
+}
+
+/* ======== BARRA LATERAL ======== */
+aside {
+  flex: 1;
+  background-color: rgb(133, 147, 236);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(65, 65, 156, 0.7);
+}
+
+/* ======== PIE DE PÁGINA ======== */
+footer {
+  background: rgb(37, 30, 100);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* ======== LOGOS E INFO ======== */
+.info-box,
+.logo-container {
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+.logo-container {
+  justify-content: right;
+}
+
+.logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ======== CUADRO DE INFORMACIÓN ======== */
+.info-box {
+   background-color: #c0c7e3;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(17, 12, 25, 0.15);
+  padding: 20px;
+  width: 300px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+.info-box h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: #3d217a;
+}
+
+.info-box p {
+  margin: 0;
+  color: #180a3b;
+  font-size: 0.98rem;
+}
+.presentacion {
+  display: flex;
+  justify-content: center;   /* Centra horizontalmente todo el grupo */
+  align-items: center;       /* Alinea verticalmente */
+  gap: 30px;                 /* Espacio entre cada bloque */
+  margin-top: 40px;
+  flex-wrap: nowrap;         /* Evita que se bajen de línea */
+}
+
+/* ======== CARRUSEL ======== */
+.carousel-container {
+  width: 350px;          /* más pequeño y proporcionado */
+  height: 200px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(21, 11, 83, 0.6);
+  border: 3px solid #090a2e;
+  background: #080640;       /* fondo negro para rellenar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  width: 400%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Agrupa los elementos en una fila */
+.alineados {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.carousel-container,
+.info-box,
+.logo-container {
+  flex: 1 1 0;
+  max-width: 350px;
+  min-width: 250px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Ajusta el logo para que ocupe el mismo espacio */
+.logo-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+/* Opcional: centra el texto del cuadro informativo */
+.info-box {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Opcional: ajusta el carrusel para que las imágenes no sobresalgan */
+.carousel img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+/* ======== UBICACIÓN ======== */
+.ubicacion-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.ubicacion-mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ubicacion-imagen img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(17, 12, 25, 0.15);
+}
